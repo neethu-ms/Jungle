@@ -16,7 +16,7 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
     end
   end
 
-  scenario "They see all products" do
+  scenario "They see Product Details" do
     # ACT
     visit root_path
     user = User.create!(:email => 'neema8@gmail.com', :password => 'neema', :password_confirmation => 'neema', :first_name => "Neema",:last_name => "Neema")
@@ -24,7 +24,7 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
     page.fill_in "email", with: 'neema8@gmail.com'
     page.fill_in "password", with: 'neema'
     click_on 'Submit'
-    puts page.html 
+ 
     page.find('div.products article:first-child').find_link("Details").trigger('click')
     expect(page).to have_css "section.products-show"
     save_screenshot
