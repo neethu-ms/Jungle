@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   has_secure_password
   
   validates :email, uniqueness: { case_sensitive: false }
-  validates :password, length: { is: 4 }
+  validates :password, length: { minimum: 4 }
   validates :first_name, :last_name, :email, presence: true
   before_save { self.email.downcase!}
 
