@@ -2,7 +2,6 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
-
 ## Setup
 
 1. Run `bundle install` to install dependencies
@@ -19,6 +18,19 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
+
+## Functionalities
+
+1. User needs to login or sign up to use the app
+2. Admin user can create or delete Products 
+3. Other users can view and buy products
+
+## Final Product
+
+!["Products"](docs/Products.png "Products")
+!["Admin Categories"](docs/AdminCategories.png "Admin Categories")
+!["Admin Products"](docs/AdminProducts.png "Admin Products")
+!["Order Details"](docs/OrderDetails.png "Order Details")
 
 ## Dependencies
 
